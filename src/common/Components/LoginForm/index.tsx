@@ -58,8 +58,8 @@ const LoginForm = () => {
     <View className="justify-between w-full">
       <View className="gap-5">
         <View>
-          <Text className="text-xl text-black">Sign In</Text>
-          <Text className="text-gray-500" style = {{fontSize: 16}}>
+          <Text className="text-xl text-black"  style = {{fontSize: 24,fontWeight : 700}}>Sign In</Text>
+          <Text className="text-gray-500" style = {{fontSize: 17}}>
             Please sign in to your registered account
           </Text>
         </View>
@@ -95,22 +95,28 @@ const LoginForm = () => {
           loading={isPending}
           contentStyle={{
             borderRadius: 50,
-            backgroundColor: COLORS.DeepPurple,
+            backgroundColor: COLORS.btnV1,
+          }}
+          labelStyle={{
+            color : COLORS.BtnextColor,
+            fontSize: 20,
+            fontWeight: "bold"
           }}
         >
           LOGIN
         </Button>
         <View className="flex-row gap-2 ">
-          <Text style={{ fontSize: 17}}>Forgot your password?</Text>
+          <Text style={{ fontSize: 18,fontWeight : 600}}>Forgot your password?</Text>
           <TouchableOpacity
             onPress={() => navigation.navigate(SCREENS.ForgotPasswordScreen)}
           >
             <Text
               style={{
-                color: COLORS.DeepPurple,
+                // color : COLORS.BtnextColor,
                 fontWeight: "bold",
                 textDecorationLine: "underline",
-                fontSize: 17
+                fontSize: 18
+              
               }}
             >
               Reset here
@@ -124,10 +130,11 @@ const LoginForm = () => {
           onPress={() => navigation.navigate(SCREENS.SignUpScreen)}
           contentStyle={{
             borderRadius: 50,
-            backgroundColor: COLORS.LightPurple,
+            backgroundColor: COLORS.btnV1,
           }}
           textColor={COLORS.DeepPurple}
-          labelStyle = {{fontSize: 20,fontWeight: "bold",}}
+          labelStyle = {{fontSize: 20,fontWeight: "bold",            color : COLORS.BtnextColor
+          }}
         >
           CREATE ACCOUNT
         </Button>

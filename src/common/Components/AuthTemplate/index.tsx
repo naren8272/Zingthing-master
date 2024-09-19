@@ -49,6 +49,8 @@ const AuthTemplate = ({ children, hasBackIcon }: Props) => {
                 resizeMode: "contain",
                 height: RFValue(125),
                 width: RFValue(175),
+                marginBottom: 40,
+                marginTop: 20
               }}
             />
           </View>
@@ -62,7 +64,7 @@ const AuthTemplate = ({ children, hasBackIcon }: Props) => {
 const styles = StyleSheet.create({
   mainBody: {
     flex: 1,
-    backgroundColor: COLORS.PrimeryColor,
+    backgroundColor: COLORS.PrimeryColor2,
   },
   container: {
     flex: 1,

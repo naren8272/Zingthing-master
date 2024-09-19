@@ -18,10 +18,9 @@ import useAuthState from "../../../store/AuthState";
 const registerFormSchema = z.object({
   name: z.string(),
   email: z.string().email("Invalid email"),
-  mobile: z
-    .string()
-    .min(10, "Mobile number must be at least 10 characters")
-    .max(10, "Mobile number must be at least 10 characters"),
+  mobile: z.string().regex(/^\d{1,10}$/, {
+    message: "Invalid phone number. It should be in international format.",
+  }),
   password: z.string().min(6, "Password must be at least 6 characters"),
   role: z.enum(["Employee", "Job Seeker"]),
 });
@@ -74,8 +73,8 @@ const SignUpForm = () => {
     <View className="justify-between w-full">
       <View className="gap-5">
         <View>
-          <Text className="text-xl text-black">Create an Account</Text>
-          <Text className="text-gray-500">
+          <Text className="text-xl text-black"  style = {{fontSize: 24,fontWeight : 700}}>Create an Account</Text>
+          <Text className="text-gray-500"  style = {{fontSize: 17}}>
             Please fill registration form below
           </Text>
         </View>
@@ -91,7 +90,7 @@ const SignUpForm = () => {
         <View>
           <TextInput
             mode="outlined"
-            placeholder="Email Id (optional)"
+            placeholder="Email Id"
             value={watch("email")}
             onChangeText={(text) =>
               setValue("email", text, { shouldValidate: true })
@@ -112,8 +111,9 @@ const SignUpForm = () => {
             className="border-gray-50"
             outlineStyle={{ borderRadius: 50 }}
             value={watch("mobile")}
-            onChangeText={(text) =>
-              setValue("mobile", text, { shouldValidate: true })
+            onChangeText={(text) =>{
+              const numericValue = text.replace(/[^0-9]/g, "");
+              setValue("mobile", numericValue, { shouldValidate: true })}
             }
           />
           <Text className="text-red-500">{errors.mobile?.message}</Text>
@@ -140,6 +140,7 @@ const SignUpForm = () => {
             pinCodeContainerStyle: {
               width: 40,
               height: 40,
+              borderColor : COLORS.Gray
             },
             containerStyle: {
               flexDirection: "row",
@@ -155,7 +156,7 @@ const SignUpForm = () => {
           onChangeText={(text) => setValue("password", text)}
         />
         <View>
-          <Text className="mb-2 font-bold">Choose Role</Text>
+          <Text className="mb-2 font-bold" style = {{fontSize: 17}}>Choose Role</Text>
           <View className="flex-row ">
             <View className="flex-row  justify-center items-center">
               <CheckBox
@@ -194,6 +195,12 @@ const SignUpForm = () => {
           className="mt-10"
           contentStyle={{
             borderRadius: 50,
+            backgroundColor: COLORS.btnV1,
+          }}
+          labelStyle={{
+            color : COLORS.BtnextColor,
+            fontSize: 20,
+            fontWeight: "bold"
           }}
         >
           CREATE

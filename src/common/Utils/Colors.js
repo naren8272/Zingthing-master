@@ -1,5 +1,6 @@
 export const COLORS = {
   PrimeryColor: '#EFFDFD',
+  PrimeryColor2: '#f6e4ca',
   DarkPrimeryColor: '#d7ffff',
   Black: '#000000',
   LightBlack: '#151515',
@@ -20,5 +21,7 @@ export const COLORS = {
   ButtonPurpal: '#994EAA',
   DeepPurple: "#40189D",
   LightPurple: "#E1D3FF",
-  DeepGreen: "#30DE13"
+  DeepGreen: "#30DE13",
+  btnV1 : "#fa8d2c",
+  BtnextColor : "#fbe8c9"
 };
