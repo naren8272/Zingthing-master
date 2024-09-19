@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "52806607257",
+    "project_id": "zingthing-bus-sol-pvt-ltd",
+    "storage_bucket": "zingthing-bus-sol-pvt-ltd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52806607257:android:bc250195167d66124df308",
+        "android_client_info": {
+          "package_name": "com.zingthing.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDatjoiIcPQ0FBBzywcx3oQq94JlaSU2EY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52806607257:android:6e2cf6ccee90e4a74df308",
+        "android_client_info": {
+          "package_name": "com.zingthing.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDatjoiIcPQ0FBBzywcx3oQq94JlaSU2EY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52806607257:android:60ceb60f3a8c49e44df308",
+        "android_client_info": {
+          "package_name": "com.zingthing.supplier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDatjoiIcPQ0FBBzywcx3oQq94JlaSU2EY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52806607257:android:726f4dd80ec1f2824df308",
+        "android_client_info": {
+          "package_name": "com.zingthingcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDatjoiIcPQ0FBBzywcx3oQq94JlaSU2EY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52806607257:android:6ea3dfee2e50f75d4df308",
+        "android_client_info": {
+          "package_name": "com.zingthingvendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDatjoiIcPQ0FBBzywcx3oQq94JlaSU2EY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52806607257-hk2v5vuhv91q9kth19v8rq18ql2tpqql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

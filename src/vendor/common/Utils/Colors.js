@@ -1,0 +1,17 @@
+export const COLORS = {
+  PrimaryColor: "#242741",
+  Black: "#000000",
+  LightBlack: "#151515",
+  extraLightBlack: "#4C4C4C",
+  TextBlack: "#5E5F6F",
+  DarkTextBlack: "#474747",
+  White: "#FFFFFF",
+  SkyBlue: "#2195F1",
+  ThemeYellow: "#FFB636",
+  Parpul: "#BB1BDF",
+  Red: "#FF0000",
+  SperatorColor: "rgb(224, 224, 224)",
+  Gray: "#A2A2A2",
+  ThemBlue: "#2D3250",
+  Green: "#00ff00",
+};
