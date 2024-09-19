@@ -58,7 +58,7 @@ const ViewCandidateDetails: React.FC = () => {
   const fetchJobDetails = async (jobId: string) => {
     try {
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/jobpost-search-list-jobpostid/${jobId}`
+        `https://jobportal.zingthing.in/api/jobpost-search-list-jobpostid/${jobId}`
       );
       const json = await response.json();
       setJobDetails(json.data[0]);

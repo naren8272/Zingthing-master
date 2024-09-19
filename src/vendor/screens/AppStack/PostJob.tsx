@@ -126,7 +126,7 @@ const PostJob = ({ route }: any) => {
     try {
       setisLoading(true);
       const responseAllList = await fetch(
-        "https://zingthing-app.ptechwebs.com/api/all-list"
+        "https://jobportal.zingthing.in/api/all-list"
       );
       const jsonAllList = await responseAllList.json();
       setItems(
@@ -206,7 +206,7 @@ const PostJob = ({ route }: any) => {
       );
 
       const responseSubscription = await fetch(
-        "https://zingthing-app.ptechwebs.com/api/job-post-subscription-list"
+        "https://jobportal.zingthing.in/api/job-post-subscription-list"
       );
       const jsonSubscription = await responseSubscription.json();
       setSubscriptionAmount(jsonSubscription.data[0].job_post_rupees);
@@ -218,7 +218,7 @@ const PostJob = ({ route }: any) => {
       setSubscriptionInDays(jsonSubscription.data[0].job_post_days);
 
       const responseState = await fetch(
-        "https://zingthing-app.ptechwebs.com/api/state-list"
+        "https://jobportal.zingthing.in/api/state-list"
       );
       const jsonState = await responseState.json();
       setStateItems(
@@ -242,7 +242,7 @@ const PostJob = ({ route }: any) => {
       setisLoading(true);
 
       const response = await fetch(
-        "https://zingthing-app.ptechwebs.com/api/jobpost-list/"
+        "https://jobportal.zingthing.in/api/jobpost-list/"
       );
       const json = await response.json();
 
@@ -289,7 +289,7 @@ const PostJob = ({ route }: any) => {
     try {
       setisLoading(true);
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/city/${id}`
+        `https://jobportal.zingthing.in/api/city/${id}`
       );
       const json = await response.json();
       setCityItems(
@@ -559,8 +559,8 @@ const PostJob = ({ route }: any) => {
 
       const response = await fetch(
         NavData
-          ? `https://zingthing-app.ptechwebs.com/api/jobpost-update/${NavData.id}`
-          : "https://zingthing-app.ptechwebs.com/api/jobpost-add",
+          ? `https://jobportal.zingthing.in/api/jobpost-update/${NavData.id}`
+          : "https://jobportal.zingthing.in/api/jobpost-add",
         {
           method: NavData ? "PUT" : "POST",
           headers: NavData
@@ -574,7 +574,19 @@ const PostJob = ({ route }: any) => {
           body: NavData ? UrlEncodedData.toString() : data,
         }
       );
-
+      console.log("nsijrijtwrijio",response,        
+        {
+        method: NavData ? "PUT" : "POST",
+        headers: NavData
+          ? {
+              Accept: "application/json",
+              "Content-Type": "application/x-www-form-urlencoded",
+            }
+          : {
+              Accept: "application/json",
+            },
+        body: NavData ? UrlEncodedData.toString() : data,
+      })
       if (!response.ok) {
         console.log(response);
       }
@@ -586,7 +598,7 @@ const PostJob = ({ route }: any) => {
           formData.append("topic", "JOB" + json?.data?.job_post_id);
           formData.append("deviceToken", fcmToken);
           var notificationResponse = await fetch(
-            `https://zingthing-app.ptechwebs.com/api/subscribeToTopic`,
+            `https://jobportal.zingthing.in/api/subscribeToTopic`,
             {
               method: "POST",
               headers: {
@@ -603,7 +615,7 @@ const PostJob = ({ route }: any) => {
         data.append("job_post_ids", json?.data?.job_post_id);
 
         const response1 = await fetch(
-          `https://zingthing-app.ptechwebs.com/api/job-search-match`,
+          `https://jobportal.zingthing.in/api/job-search-match`,
           {
             method: "POST",
             headers: {
@@ -624,7 +636,7 @@ const PostJob = ({ route }: any) => {
 
             try {
               const notificationResponse = await fetch(
-                `https://zingthing-app.ptechwebs.com/api/sendNotificationToTopic`,
+                `https://jobportal.zingthing.in/api/sendNotificationToTopic`,
                 {
                   method: "POST",
                   headers: {

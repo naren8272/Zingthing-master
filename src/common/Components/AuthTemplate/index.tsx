@@ -47,8 +47,8 @@ const AuthTemplate = ({ children, hasBackIcon }: Props) => {
               source={IMAGE.ZingThing}
               style={{
                 resizeMode: "contain",
-                height: RFValue(100),
-                width: RFValue(100),
+                height: RFValue(125),
+                width: RFValue(175),
               }}
             />
           </View>

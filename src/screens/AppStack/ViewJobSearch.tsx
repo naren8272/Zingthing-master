@@ -116,7 +116,7 @@ const ViewJobSearch: React.FC = () => {
                             data.append("landmark", jobDetails.landmark);
     
                             const response = await fetch(
-                                `https://zingthing-app.ptechwebs.com/api/jobpost-search-update/${jobDetails.id}?_method=PUT`,
+                                `https://jobportal.zingthing.in/api/jobpost-search-update/${jobDetails.id}?_method=PUT`,
                                 {
                                     method: "POST",
                                     headers: {
@@ -133,7 +133,7 @@ const ViewJobSearch: React.FC = () => {
                             formData.append("topic", "SEARCH" + json?.data?.job_post_search_id);
                             formData.append("deviceToken", fcmToken);
                             await fetch(
-                                `https://zingthing-app.ptechwebs.com/api/unSubscribeToTopic`,
+                                `https://jobportal.zingthing.in/api/unSubscribeToTopic`,
                                 {
                                     method: "POST",
                                     headers: {

@@ -46,7 +46,7 @@ export default function MyJobs({ NavData }) {
       var data = new FormData();
       data.append("job_post_ids", ids);
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/job-search-match`,
+        `https://jobportal.zingthing.in/api/job-search-match`,
         {
           method: "POST",
           headers: {
@@ -56,7 +56,7 @@ export default function MyJobs({ NavData }) {
         }
       );
       // const response = await fetch(
-      //   `https://zingthing-app.ptechwebs.com/api/jobpost-search-list/4`,
+      //   `https://jobportal.zingthing.in/api/jobpost-search-list/4`,
       // );
       if (!response.ok) {
         const errorText = await response.text();
@@ -116,7 +116,7 @@ export default function MyJobs({ NavData }) {
 
     try {
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/jobpost-notificationt-update/${item.id}`,
+        `https://jobportal.zingthing.in/api/jobpost-notificationt-update/${item.id}`,
         {
           method: "PUT",
           headers: {
@@ -132,7 +132,7 @@ export default function MyJobs({ NavData }) {
         formData.append("topic", "JOB" + item.id);
         formData.append("deviceToken", fcmToken);
         var notificationResponse = await fetch(
-          `https://zingthing-app.ptechwebs.com/api/subscribeToTopic`,
+          `https://jobportal.zingthing.in/api/subscribeToTopic`,
           {
             method: "POST",
             headers: {
@@ -146,7 +146,7 @@ export default function MyJobs({ NavData }) {
         formData.append("topic", "JOB" + item.id);
         formData.append("deviceToken", fcmToken);
         var notificationResponse = await fetch(
-          `https://zingthing-app.ptechwebs.com/api/unSubscribeToTopic`,
+          `https://jobportal.zingthing.in/api/unSubscribeToTopic`,
           {
             method: "POST",
             headers: {

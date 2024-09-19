@@ -48,7 +48,7 @@ export default function OldJobPosts() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        "https://zingthing-app.ptechwebs.com/api/jobpost-search-list/" +
+        "https://jobportal.zingthing.in/api/jobpost-search-list/" +
           customerId
       );
       const json = await response.json();
@@ -91,7 +91,7 @@ export default function OldJobPosts() {
 
     try {
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/jobpost-search-notificationt-update/${item.id}`,
+        `https://jobportal.zingthing.in/api/jobpost-search-notificationt-update/${item.id}`,
         {
           method: "PUT",
           headers: {
@@ -108,7 +108,7 @@ export default function OldJobPosts() {
           formData.append("topic", "SEARCH" + item.id);
           formData.append("deviceToken", fcmToken);
           var notificationResponse = await fetch(
-            `https://zingthing-app.ptechwebs.com/api/unSubscribeToTopic`,
+            `https://jobportal.zingthing.in/api/unSubscribeToTopic`,
             {
               method: "POST",
               headers: {
@@ -122,7 +122,7 @@ export default function OldJobPosts() {
           formData.append("topic", "SEARCH" + item.id);
           formData.append("deviceToken", fcmToken);
           var notificationResponse = await fetch(
-            `https://zingthing-app.ptechwebs.com/api/subscribeToTopic`,
+            `https://jobportal.zingthing.in/api/subscribeToTopic`,
             {
               method: "POST",
               headers: {

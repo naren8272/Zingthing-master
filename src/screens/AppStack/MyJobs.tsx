@@ -40,8 +40,8 @@ export default function MyJobs() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        // "https://zingthing-app.ptechwebs.com/api/jobpost/1"
-        "https://zingthing-app.ptechwebs.com/api/jobpost-search-list/"+customerId
+        // "https://jobportal.zingthing.in/api/jobpost/1"
+        "https://jobportal.zingthing.in/api/jobpost-search-list/"+customerId
       );
       const json = await response.json();
       const reversedData = [...json.data].reverse();
@@ -54,8 +54,8 @@ export default function MyJobs() {
     }
     try {
       const response = await fetch(
-        // "https://zingthing-app.ptechwebs.com/api/jobpost/1"
-        "https://zingthing-app.ptechwebs.com/api/available-candiates-list/1"
+        // "https://jobportal.zingthing.in/api/jobpost/1"
+        "https://jobportal.zingthing.in/api/available-candiates-list/1"
       );
       const json = await response.json();
 

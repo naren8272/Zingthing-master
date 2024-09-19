@@ -84,7 +84,7 @@ const ViewJobPost: React.FC = () => {
   const fetchJobDetails = async (jobId: string) => {
     try {
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/jobpost/${jobId}`
+        `https://jobportal.zingthing.in/api/jobpost/${jobId}`
       );
       const json = await response.json();
       setJobDetails(json.data);
@@ -138,7 +138,7 @@ const ViewJobPost: React.FC = () => {
               ).toString();
 
               const response = await fetch(
-                `https://zingthing-app.ptechwebs.com/api/jobpost-update/${MainItem}`,
+                `https://jobportal.zingthing.in/api/jobpost-update/${MainItem}`,
                 {
                   method: "PUT",
                   headers: {
@@ -156,7 +156,7 @@ const ViewJobPost: React.FC = () => {
                 formData.append("topic", "JOB" + json?.data);
                 formData.append("deviceToken", fcmToken);
                 const notify = await fetch(
-                  `https://zingthing-app.ptechwebs.com/api/unSubscribeToTopic`,
+                  `https://jobportal.zingthing.in/api/unSubscribeToTopic`,
                   {
                     method: "POST",
                     headers: {

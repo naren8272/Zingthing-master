@@ -268,7 +268,7 @@ const NewsList = ({navigation}) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://zingthing-app.ptechwebs.com/api/newsfeeds-list/1"
+          "https://jobportal.zingthing.in/api/newsfeeds-list/1"
         );
         const json = await response.json();
         console.log("object", json);
@@ -300,7 +300,7 @@ const NewsList = ({navigation}) => {
     //     Fdata.append("news_feeds_subscription_id", "1");
   
     //     const response = await fetch(
-    //       "https://zingthing-app.ptechwebs.com/api/newsfeeds-add",
+    //       "https://jobportal.zingthing.in/api/newsfeeds-add",
     //       {
     //         method: "POST",
     //         headers: {

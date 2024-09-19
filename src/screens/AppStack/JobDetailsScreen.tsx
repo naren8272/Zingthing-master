@@ -26,7 +26,7 @@ export default function JobDetailsScreen({ route }) {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/job-apply/${JobId}`
+        `https://jobportal.zingthing.in/api/job-apply/${JobId}`
       );
       const json = await response.json();
       console.log("object", json.data);

@@ -23,7 +23,7 @@ const AllCandidates: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://zingthing-app.ptechwebs.com/api/total-job-posts-based-on-job-title');
+        const response = await axios.get('https://jobportal.zingthing.in/api/total-job-posts-based-on-job-title');
         if (response.status === 200 && response.data.status) {
           const fetchedData = response.data.data.map((item: any) => ({
             id: item.id.toString(),

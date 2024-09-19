@@ -29,7 +29,7 @@ const JobDetails: React.FC = () => {
     const fetchJobDetails = async () => {
       try {
         const response = await fetch(
-          `https://zingthing-app.ptechwebs.com/api/jobpost/${details.id}`
+          `https://jobportal.zingthing.in/api/jobpost/${details.id}`
         );
         const json = await response.json();
         if (json.status && json.data) {

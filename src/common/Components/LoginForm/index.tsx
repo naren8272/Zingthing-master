@@ -59,7 +59,7 @@ const LoginForm = () => {
       <View className="gap-5">
         <View>
           <Text className="text-xl text-black">Sign In</Text>
-          <Text className="text-gray-500">
+          <Text className="text-gray-500" style = {{fontSize: 16}}>
             Please sign in to your registered account
           </Text>
         </View>
@@ -101,7 +101,7 @@ const LoginForm = () => {
           LOGIN
         </Button>
         <View className="flex-row gap-2 ">
-          <Text>Forgot your password?</Text>
+          <Text style={{ fontSize: 17}}>Forgot your password?</Text>
           <TouchableOpacity
             onPress={() => navigation.navigate(SCREENS.ForgotPasswordScreen)}
           >
@@ -110,6 +110,7 @@ const LoginForm = () => {
                 color: COLORS.DeepPurple,
                 fontWeight: "bold",
                 textDecorationLine: "underline",
+                fontSize: 17
               }}
             >
               Reset here
@@ -126,6 +127,7 @@ const LoginForm = () => {
             backgroundColor: COLORS.LightPurple,
           }}
           textColor={COLORS.DeepPurple}
+          labelStyle = {{fontSize: 20,fontWeight: "bold",}}
         >
           CREATE ACCOUNT
         </Button>

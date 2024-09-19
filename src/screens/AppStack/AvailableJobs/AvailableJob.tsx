@@ -39,7 +39,7 @@ const AvailableJob: React.FC = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://zingthing-app.ptechwebs.com/api/jobpost-search-list/${customerId}`
+        `https://jobportal.zingthing.in/api/jobpost-search-list/${customerId}`
       );
       const json = await response.json();
       const item = json.data;
@@ -55,7 +55,7 @@ const AvailableJob: React.FC = () => {
         data.append("job_post_search_ids", ids);
 
         const response1 = await fetch(
-          `https://zingthing-app.ptechwebs.com/api/job-post-match`,
+          `https://jobportal.zingthing.in/api/job-post-match`,
           {
             method: "POST",
             headers: {

@@ -1,1 +1,1 @@
-export const Api = 'https://zingthing-app.ptechwebs.com/';
+export const Api = 'https://jobportal.zingthing.in/';

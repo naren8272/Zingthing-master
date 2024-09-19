@@ -33,7 +33,7 @@ const CandidatesMatchingScreen: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://zingthing-app.ptechwebs.com/api/total-job-based-on-job-title"
+          "https://jobportal.zingthing.in/api/total-job-based-on-job-title"
         );
         console.log(response);
         if (response.status === 200 && response.data.status) {
