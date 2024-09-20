@@ -42,7 +42,7 @@ const AuthTemplate = ({ children, hasBackIcon }: Props) => {
               </TouchableOpacity>
             )}
           </View>
-          <View className="mr-[80]">
+          <View className="mr-[80]" style={{ flexDirection: 'column', justifyContent: 'center' }}>
             <Image
               source={IMAGE.ZingThing}
               style={{
@@ -50,7 +50,7 @@ const AuthTemplate = ({ children, hasBackIcon }: Props) => {
                 height: RFValue(125),
                 width: RFValue(175),
                 marginBottom: 40,
-                marginTop: 20
+                marginTop: 20,
               }}
             />
           </View>
