@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "postinstall": "patch-package",
-    "android-build": "cd android && ./gradlew clean && ./gradlew app:assembleRelease"
+    "android-build": "cd android && ./gradlew clean && ./gradlew assembleRelease"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
