@@ -65,6 +65,7 @@ const ViewJobSearch: React.FC = () => {
     useEffect(() => {
         if (route.params?.NavData) {
             setJobDetails(route.params.NavData);
+            console.log("Sefoewjroj",route.params.NavData)
             setLoading(false);
         }
     }, [route.params?.NavData]);
@@ -257,12 +258,12 @@ const ViewJobSearch: React.FC = () => {
                     )}
                     <View style={styles.row}>
                         <Text style={styles.label}>{translator("Posted", Language)}</Text>
-                        <Text style={styles.value}>: {moment(jobDetails.created_at).format("MMMM Do YYYY")}</Text>
+                        <Text style={styles.value}>: {moment(jobDetails?.job_search_date).format("MMMM Do YYYY")}</Text>
                     </View>
                     <View style={styles.row}>
                         <Text style={styles.label}>{translator("Expires", Language)}</Text>
                         <Text style={styles.value}>
-                            : {moment(jobDetails.job_post_date).add(jobDetails.job_search_days, "days").format("MMMM Do YYYY")}
+                            : {moment(jobDetails?.job_search_date).add(jobDetails?.job_search_days, "days").format("MMMM Do YYYY")}
                         </Text>
                     </View>
                     <View style={styles.row}>

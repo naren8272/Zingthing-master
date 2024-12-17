@@ -6,5 +6,5 @@ export type User = {
   mobile: string;
   password: string;
   auth_token: string;
-  role: UserRole;
+  role: UserRole
 };

@@ -5,6 +5,9 @@ type AuthState = {
   user: User | null;
   setUser: (user: User) => void;
   logout: () => void;
+  isFirst : boolean | false;
+  setIsFirst : (isFirst : boolean) => void;
+
 };
 
 import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
@@ -33,6 +36,8 @@ const useAuthState = create(
       user: null,
       setUser: (user) => set({ user }),
       logout: () => set({ user: null }),
+      isFirst : false,
+      setIsFirst : (isFirst) => set({isFirst : isFirst})
     }),
     {
       name: "auth",

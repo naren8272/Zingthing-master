@@ -31,6 +31,7 @@ const SignUpForm = () => {
   const navigation = useNavigation();
   const [isSendOtp, setIsSendOtp] = useState(false);
   const setUser = useAuthState((state) => state.setUser);
+  const setIsFirst = useAuthState((state) => state.setIsFirst);
 
   const {
     register,
@@ -47,6 +48,7 @@ const SignUpForm = () => {
     mutationFn: (mobile: string) => api.sendOtp(mobile),
     onSuccess: (data) => {
       Alert.alert("OTP has been sent");
+      console.log("nseiiw",data)
       setIsSendOtp(true);
     },
     onError: (error) => {
@@ -59,6 +61,7 @@ const SignUpForm = () => {
     mutationFn: (data: RegisterFormType) => api.register(data),
     onSuccess: (data) => {
       setUser(data.data);
+      setIsFirst(true);
     },
     onError: (error) => {
       Alert.alert(error.message);

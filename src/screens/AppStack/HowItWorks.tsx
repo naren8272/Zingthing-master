@@ -19,13 +19,15 @@ import { RFValue } from "react-native-responsive-fontsize";
 import { IMAGE } from "../../common/Utils/image";
 import { translator } from "../../localization/I18n";
 import { ContextProvider } from "../StateManagment/StateManagment";
+import useAuthState from "../../store/AuthState";
 
 const HowItWorks: React.FC = () => {
   const [agreed, setAgreed] = useState(false);
   const navigation = useNavigation();
   const { Language, SetLanguage } = useContext(ContextProvider);
   const [Open, SetOpen] = useState(false);
-
+  const {setIsFirst,isFirst} = useAuthState((state) => state);
+  console.log("skekorpe",isFirst)
   const handleProceed = async () => {
     if (agreed) {
       try {
@@ -68,7 +70,7 @@ const HowItWorks: React.FC = () => {
     <View style={{ flex: 1 }}>
       <StatusBar barStyle={"dark-content"} backgroundColor={COLORS.White} />
       <View style={styles.headerView}>
-        <Modal visible={Open} transparent={true}>
+        <Modal visible={Open || isFirst} transparent={true}>
           <View
             style={{
               flex: 1,
@@ -99,6 +101,7 @@ const HowItWorks: React.FC = () => {
                 onPress={() => {
                   SetLanguage("en");
                   SetOpen(false);
+                  setIsFirst(false)
                 }}
               >
                 <Text
@@ -122,6 +125,7 @@ const HowItWorks: React.FC = () => {
                 onPress={() => {
                   SetLanguage("hi");
                   SetOpen(false);
+                  setIsFirst(false)
                 }}
               >
                 <Text
@@ -145,6 +149,7 @@ const HowItWorks: React.FC = () => {
                 onPress={() => {
                   SetLanguage("gu");
                   SetOpen(false);
+                  setIsFirst(false)
                 }}
               >
                 <Text
@@ -168,6 +173,7 @@ const HowItWorks: React.FC = () => {
                 onPress={() => {
                   SetLanguage("mr");
                   SetOpen(false);
+                  setIsFirst(false)
                 }}
               >
                 <Text

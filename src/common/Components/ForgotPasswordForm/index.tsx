@@ -108,12 +108,14 @@ const ForgotPasswordForm = () => {
             pinCodeContainerStyle: {
               width: 40,
               height: 40,
+              borderColor : COLORS.Gray
             },
             containerStyle: {
               flexDirection: "row",
               justifyContent: "space-evenly",
               marginLeft: 20,
               marginTop: 10,
+              
             },
           }}
         />

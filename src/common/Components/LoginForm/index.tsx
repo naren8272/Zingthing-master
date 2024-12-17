@@ -22,6 +22,8 @@ const LoginFormSchema = z.object({
 export type LoginFormType = z.infer<typeof LoginFormSchema>;
 const LoginForm = () => {
   const navigation = useNavigation();
+  const setIsFirst = useAuthState((state) => state.setIsFirst);
+
   const {
     watch,
     setValue,
@@ -39,6 +41,7 @@ const LoginForm = () => {
     mutationFn: (data: LoginFormType) => api.login(data),
     onSuccess: (data) => {
       setUser(data.data);
+      // setIsFirst(true);
     },
     onError: (error) => {
       console.log(error);
